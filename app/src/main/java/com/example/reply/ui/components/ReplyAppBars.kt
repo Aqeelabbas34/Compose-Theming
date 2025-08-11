@@ -58,7 +58,7 @@ fun ReplySearchBar(modifier: Modifier = Modifier) {
             imageVector = Icons.Default.Search,
             contentDescription = stringResource(id = R.string.search),
             modifier = Modifier.padding(start = 16.dp),
-            tint = MaterialTheme.colorScheme.onPrimary
+            tint = MaterialTheme.colorScheme.onBackground
         )
         Text(
             text = stringResource(id = R.string.search_replies),
@@ -66,7 +66,7 @@ fun ReplySearchBar(modifier: Modifier = Modifier) {
                 .weight(1f)
                 .padding(16.dp),
             style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onPrimary
+            color = MaterialTheme.colorScheme.onBackground
         )
         ReplyProfileImage(
             drawableResource = R.drawable.avatar_6,
@@ -90,7 +90,8 @@ fun EmailDetailAppBar(
         modifier = modifier,
         title = {
             Column(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth()
+                ,
                 horizontalAlignment = if (isFullScreen) Alignment.CenterHorizontally
                 else Alignment.Start
             ) {
